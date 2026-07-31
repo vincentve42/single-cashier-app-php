@@ -1,0 +1,26 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+ul{
+    justify-self: end;
+    display: flex;
+    gap: 14px;
+    list-style-type: none;
+    padding-right: 20px;
+}
+nav header{
+    
+    padding:20px;
+    font-size: 32px;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    transition: ease-in 0.3s;
+}
+nav a:hover{
+    color: blue;
+}
