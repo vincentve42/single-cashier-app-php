@@ -19,10 +19,23 @@ require __DIR__ . "/./autoloader/load.php";
         </header>
         <ul>
             <li><a href="index.php">Home</a></li>
-            <li><a href="transaction.php">Transaksi</a></li>
-            <li><a href="item.php">Barang</a></li>
-            <li><a href="account.php">Akun</a></li>
-            <li><a href="logout.php">Logout</a></li>
+            <?php 
+            
+            if(isset($_SESSION['user']))
+            {
+                if($_SESSION['user']->getAdmin() == 1)
+                {
+                    echo '<li><a href="transaction.php">Transaksi</a></li>';
+                    echo '<li><a href="item.php">Barang</a></li>';
+                    echo '<li><a href="account.php">Akun</a></li>';
+                }
+            }
+            else
+            {
+                header('Location : login.php');
+            }
+            ?>
+            <li><a  class="logout" href="logout.php">Logout</a></li>
         </ul>
     </nav>
 </body>

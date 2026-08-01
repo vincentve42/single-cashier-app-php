@@ -21,6 +21,10 @@ class Account{
     {
     
     }
+    public function getAdmin()
+    {
+        return $this->isAdmin;
+    }
 
 }
 ?>
