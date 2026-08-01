@@ -14,12 +14,9 @@ class Transaction{
     {
 
     }
-    public function save()
+    public function save($database)
     {
-        
+    
     }
 }
-
-
-
 ?>

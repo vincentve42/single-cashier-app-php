@@ -9,6 +9,11 @@ $query = "SELECT * FROM account WHERE name='$username'";
 
 $result = $database->query($query);
 
+if(strlen($username) > 24)
+{
+    printf("Maksimal jumlah karakter untuk username adalah 24");
+    return 1;
+}
 if($result->num_rows > 0)
 {
     printf("Username %s telah terdaftar dalam database", $username);
@@ -16,7 +21,7 @@ if($result->num_rows > 0)
 }
 
 $password = readline("Masukan password");
-$query = "INSERT INTO account(name, password) VALUES('$username', $password)";
+$query = "INSERT INTO account(name, password, isAdmin) VALUES('$username', '$password', '1')";
 
 $result = $database->query($query);
 

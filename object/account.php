@@ -1,6 +1,5 @@
 <?php
 
-require_once __DIR__ . "../database/database.php";
 class Account{
     protected string $password;
     public string $username;
@@ -18,11 +17,10 @@ class Account{
     {
         
     }
-    public function save()
+    public function save($database)
     {
-        
+    
     }
 
 }
-
 ?>

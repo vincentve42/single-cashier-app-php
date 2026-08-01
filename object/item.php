@@ -16,9 +16,9 @@ class Item{
     {
 
     }
-    public function save()
+    public function save($database)
     {
-
+    
     }
 }
 ?>
