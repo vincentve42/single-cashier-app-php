@@ -2,6 +2,19 @@
 
 require __DIR__ . "/./autoloader/load.php";
 
+// Account Auth
+
+if(!checkAuth())
+{
+    header('Location.php ');
+}
+
+// Admin Auth
+
+if($_SESSION['user']->getAdmin() == 0)
+{
+    header('Location: index.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
