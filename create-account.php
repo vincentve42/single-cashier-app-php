@@ -20,8 +20,9 @@ if($result->num_rows > 0)
     return 1;
 }
 
-$password = readline("Masukan password");
-$query = "INSERT INTO account(name, password, isAdmin) VALUES('$username', '$password', '1')";
+$password = readline("Masukan password : ");
+$date = getCurrentDate();
+$query = "INSERT INTO account(name, password, admin, created_at, updated_at) VALUES('$username', '$password', '1', '$date', '$date')";
 
 $result = $database->query($query);
 

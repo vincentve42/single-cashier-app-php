@@ -78,7 +78,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     }
     else
     {
-        $stmt->bind_result($id,$username, $password, $isAdmin);
+        $stmt->bind_result($id,$username, $password, $isAdmin, $updated, $created);
 
         if(isset($isAdmin))
         {

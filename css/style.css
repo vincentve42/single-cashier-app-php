@@ -1,3 +1,7 @@
+body{
+    width: 100vw;
+}
+
 /* Nav */
 nav{
     display: flex;
@@ -66,4 +70,168 @@ nav a:hover{
     font-size: 12px;
     color: red;
     text-align: start;
+}
+/* Acc page */
+
+.account-content{
+    height: 80vh;
+    margin-left: 50px;
+    
+    display: flex;
+}
+
+.account-content table{
+    margin-top: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.account-content .manage .add{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-left: 40px;
+}
+.account-content .table th{
+    padding:5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid black;
+}
+.account-content .table .nama{
+    
+    width: 100%;
+    max-width: 240px;
+}
+.account-content .table .password{
+    
+    width: 100%;
+    max-width: 260px;
+}
+.account-content .table .isAdmin{
+    min-width: 100px;
+    width: 100%;
+    max-width: 120px;
+}
+.account-content .table td{
+    text-align: center;
+    border: 1px solid black;
+}
+.account-content .manage .add{
+    
+    min-width: 300px;
+    max-width: 350px;
+    width: 100%;
+    
+}
+.account-content .manage {
+    margin-top: 15px;
+    display: flex;
+    height: 280px;
+}
+.account-content .manage .add .nama{
+    margin-left: 15px;
+    margin-top: 15px;
+    
+}
+.account-content .manage .add input{
+    min-width: 84px;
+    max-width: 250px;
+    width: 100%;
+    border: none;
+    border-bottom:1px solid black;
+    
+}
+.account-content .manage .add input:focus{
+    outline: 0;
+    
+}
+.account-content .manage .add h2{
+    padding-left: 15px;
+    padding-top: 15px;
+}
+.account-content .manage .add .error{
+    padding-left: 15px;
+    font-size: 10px;
+    padding-top: 10px;
+    color: red;
+}
+.account-content .manage .add select{
+    margin-left: 15px;
+    margin-top: 10px;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 250px;
+
+}
+.account-content .manage .add button{
+    margin-left: 15px;
+    background-color: white;
+    border:1px solid black;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    margin-bottom: 10px;
+}
+.account-content .manage .edit{
+    min-width: 300px;
+    max-width: 350px;
+    margin-left: 15px;
+    width: 100%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    
+}
+.account-content .manage .edit .nama{
+    margin-left: 10px;
+    margin-top: 10px;
+    
+}
+.account-content .manage .edit input{
+    min-width: 84px;
+    max-width: 250px;
+    width: 100%;
+    border: none;
+    border-bottom:1px solid black;
+    
+}
+.account-content .manage .edit input:focus{
+    outline: 0;
+    
+}
+.account-content .manage .edit h2{
+    padding-left: 15px;
+    padding-top: 15px;
+}
+.account-content .manage .edit .error{
+    padding-left: 15px;
+    font-size: 10px;
+    padding-top: 3px;
+    color: red;
+}
+.account-content .manage .edit button{
+    margin-left: 15px;
+    background-color: white;
+    border:1px solid black;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    margin-bottom: 10px;
+}
+.account-content .manage .edit .delete{
+    margin-left: 15px;
+    background-color: white;
+    border:1px solid red;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    margin-bottom: 10px;
+}
+.account-content .manage .edit select{
+    margin-left: 10px;
+    margin-top: 10px;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 250px;
+
 }
