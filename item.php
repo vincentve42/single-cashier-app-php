@@ -6,7 +6,8 @@ require __DIR__ . "/./autoloader/load.php";
 
 if(!checkAuth())
 {
-    header('Location.php ');
+    header('Location: login.php');
+    return;
 }
 
 // Admin Auth
@@ -14,6 +15,7 @@ if(!checkAuth())
 if($_SESSION['user']->getAdmin() == 0)
 {
     header('Location: index.php');
+    return;
 }
 ?>
 <!DOCTYPE html>

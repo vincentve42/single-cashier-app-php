@@ -1,11 +1,10 @@
 <?php
 require __DIR__ . "/./autoloader/load.php";
 
-// Account Auth
-
 if(!checkAuth())
 {
-    header('Location.php ');
+    header('Location: login.php');
+    return;
 }
 
 // Admin Auth
@@ -13,6 +12,7 @@ if(!checkAuth())
 if($_SESSION['user']->getAdmin() == 0)
 {
     header('Location: index.php');
+    return;
 }
 
 if($_SERVER['REQUEST_METHOD'] == 'POST')
@@ -168,6 +168,28 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
             
         }
     }
+    if(isset($_POST['delete']))
+    {
+        $stmt = $database->prepare("SELECT * FROM account WHERE id=?");
+        $stmt->bind_param("d", $_POST['id']);
+        $stmt->execute();
+        $stmt->store_result();
+        
+        if($stmt->num_rows() == 0)
+        {
+             $_SESSION['edit_error'] = "Akun " .$_POST['id']. " tidak ada" ;
+             header('Location: account.php');
+             $stmt->close();
+             return;
+        }
+        $stmt->close();
+        $stmt = $database->prepare("DELETE FROM account WHERE id=?");
+        $stmt->bind_param("d", $_POST['id']);
+        $stmt->execute();
+        $stmt->close();
+        $_SESSION['edit_error'] = '';
+        header('Location: account.php');
+        return 1;
+    }
 }
-
 ?>

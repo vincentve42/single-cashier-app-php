@@ -2,6 +2,13 @@
 
 require __DIR__ . "/./autoloader/load.php";
 
+
+if(!checkAuth())
+{
+    header('Location: login.php');
+    return;
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
