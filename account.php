@@ -56,6 +56,7 @@ if($_SESSION['user']->getAdmin() == 0)
     <content>
         <div class="account-content">
             <div class="table">
+                <h2>Akun</h2>
                 <table>
                     <tr>
                         <th class="id">ID</th><th class="nama">Nama</th><th class="password">Pasword</th><th class="isAdmin">Admin</th><th class="isAdmin">Waktu dibuat</th><th class="isAdmin">Waktu terakhir diupdate</th>
@@ -138,7 +139,7 @@ if($_SESSION['user']->getAdmin() == 0)
                                $stmt->bind_result($id, $username,$password, $isadmin, $created_at, $update_at);
                                while($stmt->fetch())
                                 {
-                                    echo "<option name='id' value='" . $id ."'>". $username."</option>";
+                                    echo "<option name='id' value='" . $id ."'> Akun yang dipilih: ". $username."</option>";
                                 }
                             ?>
                         </select>

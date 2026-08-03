@@ -15,12 +15,31 @@ if($_SESSION['user']->getAdmin() == 0)
     return;
 }
 
+if($_SERVER['REQUEST_METHOD'] !== 'POST')
+{
+    header('Location: index.php');
+    return;
+}
+
 if($_SERVER['REQUEST_METHOD'] == 'POST')
 {
     if(isset($_POST['edit']))
     {
+        
         if(strlen($_POST['username']) > 0)
         {
+            if(strlen($_POST['username']) > 24)
+            {
+                $_SESSION['edit_error'] = "Maksimal karakter pada adalah nama 24 karakter!";
+                header('Location: account.php');
+                return;
+            }
+            if(strlen($_POST['password']) > 32)
+            {
+                $_SESSION['edit_error'] = "Maksimal karakter pada adalah nama 24 karakter!";
+                header('Location: account.php');
+                return;
+            }
             $stmt = $database->prepare("SELECT * FROM account WHERE name=?");
             $stmt->bind_param("s", $_POST['username']);
             $stmt->execute();
@@ -113,7 +132,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
         }
         else
         {
-            echo "jalan";
+            if(strlen($_POST['password']) > 32)
+            {
+                $_SESSION['edit_error'] = "Maksimal karakter pada adalah nama 24 karakter!";
+                header('Location: account.php');
+                return;
+            }
+           
             $stmt = $database->prepare("SELECT * FROM account where id=?");
 
             $stmt->bind_param("d",$_POST["id"]);

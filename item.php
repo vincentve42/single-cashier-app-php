@@ -53,5 +53,61 @@ if($_SESSION['user']->getAdmin() == 0)
             <li><a class="logout" href="logout.php">Logout</a></li>
         </ul>
     </nav>
+    <content>
+        <div class="item-content">
+            <div class="left-side">
+                <h2>Barang</h2>
+                <div class="table-wrap">
+                <table>
+                    
+                    <tr>
+                        <th class="id">ID</th><th class="nama-barang">Nama Barang</th><th class="foto">Foto Barang</th><th class="harga">Harga</th><th class="tanggal">Tanggal barang dibuat</th><th class="tanggal">Tanggal update</th>
+                    </tr>
+                </table>
+            </div>
+            </div>
+            <div class="right-side">
+                <form action="item.php" method="post" class="add">
+                    <h2>Tambah Barang</h2>
+                    <div>
+                        <input name="nama" class="input-regular" type="text" placeholder="Nama Barang">
+                    </div>
+                     <div>
+                        <input name="harga" class="input-regular" type="number" placeholder="Harga Barang">
+                    </div>
+                    <div>
+                        <p for="">Foto Produk</p>
+                        <input type="file" name="photo" class="file">
+                    </div>
+                    
+                        <h5><?php
+                            if(isset($_SESSION['add_item_error']))
+                            {
+                                echo $_SESSION['add_item_error'];
+                            }
+                        ?></h5>
+                    
+                    <div>
+                        <button type="submit">Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </content>
 </body>
 </html>
+<?php 
+
+if($_SERVER['REQUEST_METHOD'] == 'POST')
+{
+    print_r($_FILES);
+    // if($_FILES['photo']['error'] == 4)
+    // {
+    //     $_SESSION['add_item_error'] = "File foto belum di upload";
+    //     header('Location: item.php');
+    //     return;
+    // }
+}
+
+?>
+

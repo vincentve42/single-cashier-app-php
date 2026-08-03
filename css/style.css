@@ -76,15 +76,29 @@ nav a:hover{
 .account-content{
     height: 80vh;
     margin-left: 50px;
-    
+    position: absolute;
     display: flex;
 }
-
-.account-content table{
-    margin-top: 20px;
+.account-content .table{
+    margin-top: 30px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    
+    
+    height: 80vh;
+}
+.account-content h2{
+    padding-left: 15px;
+    padding-top: 10px;
+}
+.account-content table{
+    overflow: auto;
     border: 1px solid black;
     border-collapse: collapse;
+    width: 50vw;
+    max-height: 70vh;
+    margin: 10px;
+    
 }
 .account-content .manage .add{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -95,20 +109,20 @@ nav a:hover{
     padding-left: 15px;
     padding-right: 15px;
     border: 1px solid black;
+   
 }
 .account-content .table .nama{
     
-    width: 100%;
+    
     max-width: 240px;
 }
 .account-content .table .password{
     
-    width: 100%;
+    
     max-width: 260px;
 }
 .account-content .table .isAdmin{
-    min-width: 100px;
-    width: 100%;
+    
     max-width: 120px;
 }
 .account-content .table td{
@@ -116,26 +130,29 @@ nav a:hover{
     border: 1px solid black;
 }
 .account-content .manage .add{
+    width: 45vw;
+    height: 35vh;
+    margin-left: 15px;
     
-    min-width: 300px;
-    max-width: 350px;
-    width: 100%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+   
     
 }
 .account-content .manage {
     margin-top: 15px;
-    display: flex;
-    height: 280px;
+    
+    height: 40vh;
 }
 .account-content .manage .add .nama{
     margin-left: 15px;
-    margin-top: 15px;
+    margin-top: 20px;
     
 }
 .account-content .manage .add input{
-    min-width: 84px;
-    max-width: 250px;
-    width: 100%;
+    margin-top: 20px;
+    font-size: 16px;
+    width: fit-content;
+    width: 75%;
     border: none;
     border-bottom:1px solid black;
     
@@ -147,19 +164,24 @@ nav a:hover{
 .account-content .manage .add h2{
     padding-left: 15px;
     padding-top: 15px;
+    font-size: 32px;
 }
 .account-content .manage .add .error{
     padding-left: 15px;
-    font-size: 10px;
+    font-size: 14px;
     padding-top: 10px;
     color: red;
 }
 .account-content .manage .add select{
     margin-left: 15px;
-    margin-top: 10px;
+    margin-top: 20px;
     border: none;
     border-bottom: 1px solid black;
-    width: 250px;
+    font-size: 16px;
+    width: fit-content;
+    width: 75%;
+    border: none;
+    border-bottom:1px solid black;
 
 }
 .account-content .manage .add button{
@@ -171,24 +193,35 @@ nav a:hover{
     padding-bottom: 4px;
     padding-top: 4px;
     margin-bottom: 10px;
+    font-size: 16px;
 }
 .account-content .manage .edit{
-    min-width: 300px;
-    max-width: 350px;
+    width: 45vw;
     margin-left: 15px;
-    width: 100%;
+    
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    height: 40vh;
     
 }
 .account-content .manage .edit .nama{
-    margin-left: 10px;
+     margin-left: 10px;
     margin-top: 10px;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 250px;
+    margin-top: 20px;
+    font-size: 16px;
+    width: fit-content;
+    width: 75%;
+    border: none;
+    border-bottom:1px solid black;
     
 }
 .account-content .manage .edit input{
-    min-width: 84px;
-    max-width: 250px;
-    width: 100%;
+    margin-top: 20px;
+    font-size: 16px;
+    width: fit-content;
+    width: 75%;
     border: none;
     border-bottom:1px solid black;
     
@@ -200,6 +233,7 @@ nav a:hover{
 .account-content .manage .edit h2{
     padding-left: 15px;
     padding-top: 15px;
+    font-size: 32px;
 }
 .account-content .manage .edit .error{
     padding-left: 15px;
@@ -216,6 +250,7 @@ nav a:hover{
     padding-bottom: 4px;
     padding-top: 4px;
     margin-bottom: 10px;
+    font-size: 16px;
 }
 .account-content .manage .edit .delete{
     margin-left: 15px;
@@ -233,5 +268,114 @@ nav a:hover{
     border: none;
     border-bottom: 1px solid black;
     width: 250px;
+    margin-top: 20px;
+    font-size: 16px;
+    width: fit-content;
+    width: 75%;
+    border: none;
+    border-bottom:1px solid black;
 
+}
+.item-content{
+    display: flex;
+    margin-top: 30px;
+    margin-left: 25px;
+    height: 80vh;
+
+}
+.item-content .left-side{
+    width: 70vw;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.item-content table{
+    
+    margin-left: 20px;
+    margin-right: 20px;
+    
+    border: 1px solid black;
+    border-collapse: collapse;
+    max-height: 70vh;
+    width: 65vw;
+    
+}
+.item-content table th{
+    border-collapse: collapse;
+    width: 100%;
+    border-right: 1px solid black;
+    
+}
+.item-content h2{
+    padding: 10px;
+    width: fit-content;
+    border-collapse: collapse;
+    
+    
+}
+.item-content table tr{
+    
+    display: flex;
+    gap: 10px;
+}
+.item-content table .id{
+    min-width: 50px;
+}
+.item-content table .nama-barang{
+    min-width: 150px;
+}
+.item-content table .foto{
+    width: 100%;
+    max-width: 256px;
+}
+.item-content table .harga{
+    min-width: 100px;
+}
+.item-content table .tanggal{
+    min-width: 150px;
+}
+.table-wrap{
+    max-height: 70vh;
+    overflow-y: auto;
+}
+.item-content .add{
+    margin-left: 20px;
+    width: 25vw;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    height: 40vh;
+}
+.item-content .add h2{
+    font-size: 24px;
+}
+.item-content .add p{
+    margin-left: 15px;
+    font-size: 18px;
+}
+.item-content .add .input-regular{
+    margin-top: 20px;
+    font-size: 16px;
+    margin-left: 15px;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 20vw;
+}
+.item-content .add h5{
+    margin-left: 15px;
+    font-weight: 100;
+    font-size: 14px;
+    color: red;
+}
+.item-content .add button{
+    margin-left: 15px;
+    background-color: white;
+    border:1px solid black;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.file{
+    margin-top: 0px;
+    margin-left: 15px;
+    font-size: 14px;
 }
